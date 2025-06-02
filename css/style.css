@@ -135,14 +135,16 @@ li {
 /*-------------------------------------------
 私たちについて (About)
 -------------------------------------------*/
-#about ul {
+#ABOUT ul {
   margin-bottom: 30px;
 }
-#about li:first-child {
+#ABOUT li:first-child {
   margin-bottom: 30px;
 }
-#about p {
+#ABOUT p {
   text-align:justify;
+  line-height: 2.2; /* 段落内の行間 */
+  margin-bottom: 2.2em; /* 段落下の余白を追加して、段落間のスペースを確保 */
 }
 
 /*-------------------------------------------
