@@ -1,0 +1,345 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+body {
+  color: #24292e;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+
+.site-title {
+  line-height: 1px;
+}
+.site-title a {
+  display: block;
+}
+.sec-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+@media screen and (min-width: 901px) {
+  /*-------------------------------------------
+  PC表示 (901px以上)
+  -------------------------------------------*/
+  /* ヘッダー */
+  #header {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4% 0 0;
+    box-sizing: border-box;
+  }
+  /* ロゴ */
+  #header .site-title {
+    margin: 0;
+    display: inline-block;
+    line-height: 0;
+    position: relative;
+  }
+  #header .site-title img {
+    display: block;
+  }
+
+#header .site-title .logo-back {
+  left: 0px;
+  top: 0px;
+  width: 252px;
+  height: 111px;
+}
+
+#header .site-title .logo-img {
+  position: absolute;
+  left: 30px;
+  top: 10px;
+  height: 85px;
+  width: auto;
+  z-index: 1;
+}
+
+  /* ナビゲーションメニュー */
+  #header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 25px;
+  }
+  #header nav ul li {
+    margin-left: 25px;
+    padding-left: 25px;
+    border-left: 1px solid #306F3A;
+  }
+  #header nav ul li:first-child {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+  }
+
+  #header nav ul li a {
+    text-decoration: none;
+    color: #306F3A;
+    font-weight: 300;
+    display: inline-flex;
+    align-items: center;
+    font-size: 14pt;
+    font-family: "A P-OTF Shuei MaruGo StdN", sans-serif;
+    line-height: 1.4;
+  }
+
+  #header nav ul li .icon {
+    margin-right: 5px;
+  }
+
+  /* ハンバーガーメニュー非表示 */
+  .hamburger-checkbox,
+  .hamburger-label {
+    display: none;
+  }
+
+  .wrapper {
+    max-width: 800px;
+    margin: 240px auto;
+    font-size: 0.9rem;
+    padding: 0 4%;
+  }
+}
+
+/*-------------------------------------------
+メインビジュアル
+-------------------------------------------*/
+#mainvisual {
+  margin-bottom: 80px;
+}
+#mainvisual img {
+  width: 100%;
+  max-width: 1920px;
+  height: 900px;
+  object-fit: cover;
+}
+
+/*-------------------------------------------
+私たちについて (About)
+-------------------------------------------*/
+#about ul {
+  margin-bottom: 30px;
+}
+#about li:first-child {
+  margin-bottom: 30px;
+}
+#about p {
+  text-align:justify;
+}
+
+/*-------------------------------------------
+お問い合わせ (Contact)
+-------------------------------------------*/
+.form-item {
+  margin-bottom: 20px;
+}
+
+.form-item label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-item .required {
+  background-color: #c00;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 8px;
+  font-weight: normal;
+}
+
+.form-item input[type="text"],
+.form-item input[type="email"],
+.form-item input[type="tel"],
+.form-item textarea {
+  width: 100%;
+  border: solid 1px #c8c8c8;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.form-item textarea {
+  height: 10rem;
+  resize: vertical;
+}
+#CONTACT .button {
+  text-align: center;
+}
+#CONTACT .button input[type="submit"] {
+  display: inline-block;
+  padding: 12px 40px;
+  background-color: #306F3A;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  font-family: 'Josefin Sans', sans-serif;
+}
+#CONTACT .button input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+/*-------------------------------------------
+Footer
+-------------------------------------------*/
+#footer {
+  background-color: #306F3A;
+  color: #fff;
+  font-size: 0.5rem;
+  padding: 30px 0;
+  text-align: center;
+}
+
+/*-------------------------------------------
+ページトップへ戻るボタン
+-------------------------------------------*/
+#page-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+#page-top-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: #306F3A;
+}
+
+#page-top-btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+  opacity: 0.9;
+}
+
+#ABOUT .sec-title,
+#ACTIVITIES .sec-title,
+#CORPORATION .sec-title,
+#CONTACT .sec-title
+{
+  font-size: 36pt;
+  color: #306F3A;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+#ABOUT p,
+#CORPORATION dl,
+#CONTACT form label,
+#CONTACT form input,
+#CONTACT form textarea {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* セクションサブタイトル */
+.sec-title .sec-subtitle {
+  display: block;
+  font-family: "A P-OTF Shuei MaruGo StdN", sans-serif;
+  font-size: 14pt;
+  font-weight: normal;
+  margin-top: 8px;
+  line-height: 1.4;
+  color: inherit;
+}
+/* 法人情報テーブル */
+#CORPORATION table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#CORPORATION th,
+#CORPORATION td {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+#CORPORATION th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  width: 30%;
+}
+
+/* Googleマップ ラッパー */
+.map-wrapper {
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 75%;
+}
+
+.map-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* リンクボタン */
+.button-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 1px solid #306F3A;
+  color: #306F3A;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-link:hover {
+  background-color: #306F3A;
+  color: #fff;
+}
+
+/* テキスト中央揃え */
+#ABOUT p,
+#ACTIVITIES p,
+#CONTACT p {
+  text-align: center;
+}
+
+/* SP用改行 (PC非表示) */
+.br-sp {
+  display: none;
+}

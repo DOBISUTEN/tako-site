@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+/*-------------------------------------------
+スマートフォン表示 (画面幅910px以下)
+-------------------------------------------*/
+.wrapper {
+  margin-top: 90px;
+  margin-bottom: 90px;
+  padding: 0 10%;
+}
+.sec-title {
+  margin-bottom: 40px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 28pt;
+  color: #306F3A;
+  text-align: center;
+  line-height: 1.2;
+}
+
+
+/*-------------------------------------------
+ヘッダー (header)
+-------------------------------------------*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px 10px 0;
+  background-color: transparent;
+  box-shadow: none;
+  z-index: 10;
+}
+#header .site-title {
+  margin-bottom: 0;
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+#header .site-title .logo-back {
+  display: block;
+  height: 70px;
+  width: auto;
+}
+#header .site-title .logo-img {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* ハンバーガーメニュー */
+.hamburger-checkbox {
+  display: none;
+}
+
+.hamburger-label {
+  display: block;
+  cursor: pointer;
+  z-index: 1001;
+  background: none;
+  border: none;
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  padding: 0;
+}
+
+.hamburger-label svg {
+  width: 28px;
+  height: 28px;
+  fill: #306F3A;
+  display: block;
+}
+
+/* ナビゲーションメニュー */
+#global-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #3a3a3a;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* チェックボックスがオンの時にナビゲーションを表示 */
+.hamburger-checkbox:checked ~ #global-nav {
+  display: block;
+}
+
+/* セクションタイトルの日本語サブタイトル */
+.sec-title .sec-subtitle {
+  display: block;
+  font-family: "A P-OTF Shuei MaruGo StdN", sans-serif;
+  font-size: 14pt;
+  font-weight: normal;
+  margin-top: 5px;
+  line-height: 1.3;
+  color: inherit;
+}
+#global-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+#global-nav ul li {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none;
+  width: 100%;
+  border-bottom: 1px solid #306F3A;
+}
+#global-nav ul li:last-child {
+  border-bottom: none;
+}
+
+#global-nav ul li a {
+  color: #fff;
+  padding: 15px 20px;
+  display: block;
+  text-decoration: none;
+  writing-mode: horizontal-tb;
+  line-height: 1.3;
+  text-align: left;
+}
+#global-nav ul li a:hover {
+  background-color: #4a4a4a;
+}
+
+/* 指定セクションにJosefin Sansフォントを適用 */
+#ABOUT p,
+#CORPORATION table,
+#CONTACT form label,
+#CONTACT form input,
+#CONTACT form textarea { /* input[type="submit"] を使用しており、そのフォントはグローバルCSSで指定済のため button[type="submit"] は削除 */
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/*-------------------------------------------
+法人情報 (CORPORATION)
+-------------------------------------------*/
+#CORPORATION table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+#CORPORATION th,
+#CORPORATION td {
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+#CORPORATION th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+  /* width: 35%; ヘッダー項目名が長い場合は 'auto' も検討 */
+}
+
+/*-------------------------------------------
+メインビジュアル (mainvisual)
+-------------------------------------------*/
+#mainvisual {
+  height: 400px;
+  overflow: hidden;
+}
+
+#mainvisual picture,
+#mainvisual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/*-------------------------------------------
+Googleマップ (CORPORATIONセクション内)
+-------------------------------------------*/
+.map-wrapper {
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 75%;
+}
+
+.map-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/*-------------------------------------------
+その他・ユーティリティ
+-------------------------------------------*/
+/* スマートフォン表示時のみ改行させるためのクラス */
+.br-sp {
+  display: inline; /* SPではspanとして表示（中の<br>が効くように） */
+}
